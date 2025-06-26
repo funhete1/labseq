@@ -1,0 +1,68 @@
+<div class="container">
+  <header class="header">
+    <h1>LabSeq Sequence</h1>
+  </header>
+
+  <main class="main">
+    <section class="left">
+      <div class="input-section">
+        <h2>Calculate the nth LabSeq number</h2>
+        <p class="instruction">Enter a value for 'n' below:</p>
+        <div class="input-group">
+          <label for="n-input">n:</label>
+          <input id="n-input" class="input-bar" type="text" [(ngModel)]="n" placeholder="e.g., 5" />
+          <button type="submit" class="calculate-btn" (click)="fetch()">Calculate</button>
+        </div>
+      </div>
+
+      <div class="first-elements-section">
+        <h3>First 10 elements from the sequence</h3>
+        <div class="elements-list">
+            <pre class="elements-list">
+l(0) = 0 
+l(1) = 1
+l(2) = 0 
+l(3) = 1 
+l(4) = 1
+l(5) = 1
+l(6) = 1
+l(7) = 2
+l(8) = 2
+l(9) = 2
+            </pre>
+            </div>
+      </div>
+
+      <div class="sequence-definition-section">
+        <h3>LabSeq Sequence Definition:</h3>
+        <pre class="sequence-code">
+n=0  => l(0) = 0
+n=1  => l(1) = 1
+n=2  => l(2) = 0
+n=3  => l(3) = 1
+n > 3 => l(n) = l(n-4) + l(n-3)
+        </pre>
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="result-display">
+        <h3>Result:</h3>
+        <div class="result-box">
+          <div class="result-content-wrapper">
+              <p class="result-label">l(n) =</p>
+              <p class="result-value">{{ result !== null ? result : '?' }}</p>
+          </div>
+          <div>
+              <div></div>
+          </div>
+        </div>
+        <p class="result-placeholder-text" *ngIf="result === null">Enter a number on the left to see the result here.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 LabSeq Checker. All rights reserved.</p>
+  </footer>
+</div>
