@@ -73,7 +73,7 @@ You have two primary options to run the application:
 
 3. Run the following command to build and start the services:
 ```
-\docker compose up --build
+docker compose up --build
 ```
 #### Option 2: Manual Build and Run
 
@@ -87,7 +87,6 @@ You have two primary options to run the application:
 
   ```
   ./mvnw compile quarkus:dev
-  
   ```
 
 3. **Start the Frontend:**
@@ -98,7 +97,6 @@ You have two primary options to run the application:
 
   ```
   ng serve
-  
   ```
 * Access the frontend
   ```
@@ -110,7 +108,7 @@ You have two primary options to run the application:
 
 Once the backend service is running, the API endpoints are fully documented using Swagger UI. You can access the documentation in your web browser at:
   ```
-  <http://localhost:8080/swagger-ui/>
+  http://localhost:8080/swagger-ui/
   ```
 
 ## License
